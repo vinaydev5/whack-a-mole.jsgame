@@ -25,6 +25,9 @@ document.addEventListener('mouseup',()=>{
 
    img.addEventListener('click',()=> {
     img.src = 'mole-whacked.png';
+     let aud=document.createElement("audio");
+    aud.setAttribute("src","./ough-47202.mp3");
+    aud.autoplay="true";
     score += 10;
     scoreE1.innerText = score;
     setInterval(() => {

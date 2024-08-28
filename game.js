@@ -15,6 +15,26 @@ document.addEventListener('mousedown',()=>{
 document.addEventListener('mouseup',()=>{
   cursor.classList.remove('active');
  });
+
+ document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+
+  document.getElementById('error-message').textContent = '';
+
+  
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  if (username === '' || password === '') {
+      document.getElementById('error-message').textContent = 'Please fill out both fields.';
+      return;
+  }
+
+
+  alert('Login successful!');
+  
+});
  
  function run(){
   let i = Math.floor(Math.random() * holes.length);
